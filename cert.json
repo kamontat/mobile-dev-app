@@ -1,0 +1,11 @@
+{
+    "firebase": {
+        "apiKey": "AIzaSyAXVgduKt3YlLlORfJ7oZI5b-MIE6s7vOo",
+        "authDomain": "news-react-native.firebaseapp.com",
+        "databaseURL": "https://news-react-native.firebaseio.com",
+        "projectId": "news-react-native",
+        "storageBucket": "news-react-native.appspot.com",
+        "messagingSenderId": "308319176650"
+    },
+    "newsapi": "ea1eff66b6d847b4bb589f468ba39a0d"
+}
