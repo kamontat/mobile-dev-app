@@ -11,7 +11,7 @@ import * as firebase from 'firebase';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
-import NewsScreen from './screens/NewsScreen';
+import MainScreen from './screens/MainScreen';
 
 firebase.initializeApp(require("./cert.json").firebase);
 
@@ -32,7 +32,7 @@ export default class App extends React.Component {
                         <Scene key="login" hideNavBar component={LoginScreen} title="Login" />
                         <Scene key="register" hideNavBar component={RegisterScreen} title="Register" />
                     </Stack>
-                    <Scene key="news" component={NewsScreen} title="News" init={true} />
+                    <Scene key="main" component={MainScreen} title="Main" init={true} />
                 </Modal>
             </Router >
         );

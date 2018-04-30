@@ -60,7 +60,7 @@ export default class LoginScreen extends FormScreen {
             return
         }
         console.log(`login as ${user.email}`)
-        Actions.news({ user: user })
+        Actions.main({ user: user })
     }
 
     submitForm(isValid, values, validationResults, postSubmit = null, modalNavigator = null) {
@@ -68,7 +68,7 @@ export default class LoginScreen extends FormScreen {
             firebase.auth().signInWithEmailAndPassword(values.email, values.password).then((obj) => {
                 console.log(`login as ${obj.email}`)
                 postSubmit()
-                Actions.news({ user: obj })
+                Actions.main({ user: obj })
             }).catch((error) => {
                 // Handle Errors here.
                 postSubmit([error.code, error.message])

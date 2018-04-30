@@ -1,18 +1,27 @@
-import React, { Component } from 'react';
-import { View, Text, SafeAreaView, ScrollView, Button } from 'react-native';
+import React, { Component } from 'react'
 
-import { defaultContainerStyle } from '../styles/ContainerStyles';
+import { StyleSheet, Dimensions } from 'react-native'
+import { View, SafeAreaView, ScrollView } from 'react-native'
+import { Text, Button, FlatList } from 'react-native'
 
-import * as firebase from 'firebase';
+import { List, ListItem } from 'react-native-elements'
 
-import { Actions } from 'react-native-router-flux';
+import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view'
 
-import newsAPI from '../model';
+import { defaultContainerStyle } from '../styles/ContainerStyles'
+
+import * as firebase from 'firebase'
+
+import { Actions } from 'react-native-router-flux'
+
+import newsAPI from '../model'
+
+const initialLayout = {
+    height: 0,
+    width: Dimensions.get('window').width,
+}
 
 export default class NewsScreen extends Component {
-    async componentWillMount() {
-        // console.log(await newsAPI.getLatest())
-    }
 
     render() {
         return (
@@ -21,10 +30,10 @@ export default class NewsScreen extends Component {
                     <Text style={{ color: "white" }}>
                         login as {this.props.user.email}
                     </Text>
-                    <Text>Power by News API</Text>
+                    <Text style={{ color: "white" }}>Power by News API</Text>
                 </ScrollView>
 
-                <View style={defaultContainerStyle.footer}>
+                {/* <View style={defaultContainerStyle.footer}>
                     <Button
                         title="Logout"
                         fontSize={23}
@@ -40,7 +49,7 @@ export default class NewsScreen extends Component {
                                 console.warn(err);
                             })
                         }} />
-                </View>
+                </View> */}
             </SafeAreaView>
         );
     }

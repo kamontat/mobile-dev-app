@@ -1,10 +1,13 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
 
 export const defaultContainerStyle = StyleSheet.create({
+    default: {
+        flex: 1
+    },
     container: {
         flex: 1,
         height: "100%",
-        backgroundColor: '#000',
+        backgroundColor: require('randomcolor')(),
         alignItems: 'center',
         justifyContent: 'center',
     },
