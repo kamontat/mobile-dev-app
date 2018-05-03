@@ -13,7 +13,6 @@ const welcomeScreenStyle = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: "#004d40"
     },
     slide2: {
         flex: 1,

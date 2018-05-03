@@ -4,7 +4,7 @@ import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
 
 import { defaultContainerStyle } from '../styles/ContainerStyles'
 
-import NewsScreen from './NewsScreen'
+import DatabaseScreen from './DatabaseScreen'
 import LogoutScreen from './LogoutScreen'
 import UserListScreen from './UserListScreen'
 
@@ -18,8 +18,8 @@ export default class MainScreen extends React.Component {
         index: 0,
         routes: [
             { key: 'user', title: 'Users' },
-            { key: 'news', title: 'News feed' },
-            { key: 'setting', title: 'Setting' },
+            { key: 'database', title: 'Databases' },
+            { key: 'setting', title: 'Settings' },
         ],
     };
 
@@ -29,7 +29,7 @@ export default class MainScreen extends React.Component {
 
     _renderScene = SceneMap({
         user: () => <UserListScreen {...this.props} />,
-        news: () => <NewsScreen {...this.props} />,
+        database: () => <DatabaseScreen {...this.props} />,
         setting: () => <LogoutScreen {...this.props} />
     });
 

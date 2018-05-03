@@ -13,7 +13,7 @@ import RegisterScreen from './screens/RegisterScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import MainScreen from './screens/MainScreen';
 
-firebase.initializeApp(require("./cert.json").firebase);
+// firebase.initializeApp(require("./cert.json").firebase);
 
 export default class App extends React.Component {
     render() {
